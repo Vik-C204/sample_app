@@ -30,7 +30,8 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     assert_redirected_to @user
     @user.reload
     assert_equal name,  @user.name
-    assert_equal email, @user.email end
+    assert_equal email, @user.email
+  end
 
   test "should redirect edit when not logged in" do
     get edit_user_path(@user)
